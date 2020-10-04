@@ -7,7 +7,7 @@ import org.junit.Test;
 public class MoodAnalyserTest {
 	@Test
 	public void testMoodAnalysis() {
-		MoodAnalyser moodAnalyser = new MoodAnalyser("");
+		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in happy mood");
 
 		String mood = moodAnalyser.analyseMood();
 
