@@ -9,8 +9,8 @@ public class MoodAnalyserTest {
 	public void testMoodAnalysis() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser();
 
-		String mood = moodAnalyser.analyseMood("This is a sad message");
+		String mood = moodAnalyser.analyseMood("I am in any mood");
 
-		Assert.assertThat(mood, CoreMatchers.is("SAD"));
+		Assert.assertThat(mood, CoreMatchers.is("HAPPY"));
 	}
 }
