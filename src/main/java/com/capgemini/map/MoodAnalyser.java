@@ -1,12 +1,21 @@
 package com.capgemini.map;
 
 public class MoodAnalyser {
+	
+	private String message;
 
-	public String analyseMood(String message) {
-		if (message.contains("sad")) {
-			return "SAD";
-		} else {
+	public MoodAnalyser() {
+	}
+	
+	public MoodAnalyser(String message) {
+		this.message = message;
+	}
+
+	public String analyseMood() {
+		if (message.contains("happy")) {
 			return "HAPPY";
+		} else {
+			return "SAD";
 		}
 	}
 }

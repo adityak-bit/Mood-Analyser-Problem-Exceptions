@@ -7,9 +7,9 @@ import org.junit.Test;
 public class MoodAnalyserTest {
 	@Test
 	public void testMoodAnalysis() {
-		MoodAnalyser moodAnalyser = new MoodAnalyser();
+		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in happy mood");
 
-		String mood = moodAnalyser.analyseMood("I am in any mood");
+		String mood = moodAnalyser.analyseMood();
 
 		Assert.assertThat(mood, CoreMatchers.is("HAPPY"));
 	}
