@@ -7,10 +7,10 @@ import org.junit.Test;
 public class MoodAnalyserTest {
 	@Test
 	public void testMoodAnalysis() {
-		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in happy mood");
+		MoodAnalyser moodAnalyser = new MoodAnalyser("");
 
 		String mood = moodAnalyser.analyseMood();
 
-		Assert.assertThat(mood, CoreMatchers.is("HAPPY"));
+		Assert.assertThat(mood, CoreMatchers.is("SAD"));
 	}
 }
