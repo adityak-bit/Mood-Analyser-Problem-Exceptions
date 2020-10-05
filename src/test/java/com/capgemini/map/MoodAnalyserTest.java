@@ -16,6 +16,6 @@ public class MoodAnalyserTest {
 			String mood1 = moodAnalyser1.analyseMood();
 
 			Assert.assertThat(mood, CoreMatchers.is("HAPPY"));
-			Assert.assertThat(mood1, CoreMatchers.is("NULL"));    
+			Assert.assertThat(mood1, CoreMatchers.is("HAPPY"));    
 	}
 }
