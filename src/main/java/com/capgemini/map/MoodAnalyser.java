@@ -1,22 +1,28 @@
 package com.capgemini.map;
 
-public class MoodAnalyser {
-	
-	
+class MoodAnalyser {
 	private String message;
-
+	
+	public MoodAnalyser() {}
+	
 	public MoodAnalyser(String message) {
 		this.message = message;
 	}
-
-	public String analyseMood() {
+	
+	public String analyseMood(String message) throws MoodAnalyserException{
+		this.message = message;
+		return analyseMood();
+	}
+	public String analyseMood() throws MoodAnalyserException {
 		try {
-			if (message.contains("happy"))
-				return "HAPPY";
+			if(message.length() == 0)
+				throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY,"Enter some message");
+			if(message.contains("happy"))
+					return "SAD";
 			else
-				return "SAD";
-		} catch (NullPointerException e) {
-			return "HAPPY";
+				return "HAPPY";
+		}catch(NullPointerException e) {
+			throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"Enter proper message");
 		}
 	}
 }
